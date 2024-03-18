@@ -105,8 +105,7 @@ class PerfectTeam:
                if v in verts:
                   verts.remove(v)
         
-               
-           
+                         
              
     def reverse_mutation(self):
          self.team = self.previousteam
@@ -137,13 +136,15 @@ class PerfectTeam:
         
         
         
-        
-for i in range(1):        
-  G, M, vertices = matrixgraph_from_edges('naukowcy.txt')     
-  S = Scientists(G, M, vertices) 
-  Rozw = PerfectTeam(S, 80)
-  Rozw.ILS(S, 30, 1)
-  print(len(Rozw.team))
+def main():      
+  
+    G, M, vertices = matrixgraph_from_edges('naukowcy.txt')     
+    S = Scientists(G, M, vertices) 
+    Rozw = PerfectTeam(S, 80)
+    Rozw.ILS(S, 30, 1)
+    print("Team size: ", len(Rozw.team))
+
+main()
         
     
         
